@@ -6,16 +6,41 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+title: John Potess
+email: jppotess@gmail.com
+description:
+  John Potess is an audio engineer turned web developer with an entrepreneur spirit
+  and a taste for craft brews and fine dining. Expect the unexpected and prepare 
+  yourself for a magical adventure of wonder and amazement.
+url: "http://johnpotess.com" # the base hostname & protocol for your site
+twitter_username: johnpotess
+github_username:  jppotess
+paginate: 3
+gems: [jekyll-paginate]
+paginate_path: "page:num"
 
 # Build settings
 markdown: kramdown
+permalinks: /:title
+
+# Default settings
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      type: "post"
+      author: John Potess
+      layout: "post"
+
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: page
+      type: "pages"
+      author: John Potess
+
+
+
+
+
